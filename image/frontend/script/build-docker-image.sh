@@ -3,7 +3,7 @@ PRJ_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/..
 cd ${PRJ_DIR}
 
 # CHANGE THIS {DOCKER_IMAGE_NAME}.
-DOCKER_IMAGE_NAME="sideproj-ui"
+DOCKER_IMAGE_NAME="spj3-ui"
 VERSION=$(grep -Po '"version": "\K.*?(?=")' ${PRJ_DIR}/package.json)
 
 VUE_APP_API_HOST="${VUE_APP_API_HOST:-https://rag.helenfit.com:31244/v1}"

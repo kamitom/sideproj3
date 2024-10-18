@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>hello home</h1>
+    <h1>Hello 🇮🇱特拉維夫</h1>
     <TheIcon icon="home" />
   </div>
 </template>

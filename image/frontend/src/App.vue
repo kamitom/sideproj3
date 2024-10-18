@@ -1,10 +1,9 @@
 <template>
-  <TheIcon icon="home" />
+  <router-view />
 </template>
 
 <script setup>
   import "./assets/base.css";
-  import TheIcon from "./components/TheIcon.vue";
 
 </script>
 

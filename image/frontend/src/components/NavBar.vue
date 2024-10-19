@@ -14,13 +14,13 @@
       </button>
       <!-- dropdown -->
       <div class="profileDropDown">
-        <img src="../assets/avatarDefault.png" width="42" height="42" alt="avatar" />
-        <div class="dropdownMenu">
+        <img src="../assets/avatarDefault.png" width="42" height="42" alt="avatar" style="background: #ccc" />
+        <!-- <div class="dropdownMenu">
           <ul class="profileMenu">
             <li><router-link to="/profile">個人主頁</router-link></li>
             <li>退出登錄</li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </nav>

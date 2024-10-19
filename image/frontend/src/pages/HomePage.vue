@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="postList">
-      <div class="postItem" v-for="n in 10">
+      <div class="postItem" v-for="n in 9" :key="n">
         <img src="" alt="" width="100%" height="100%" style="background: #eee" />
         <div class="postInfo">
           <div class="postMeta">

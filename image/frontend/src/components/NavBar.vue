@@ -17,8 +17,8 @@
         <img src="../assets/avatarDefault.png" width="42" height="42" alt="avatar" />
         <div class="dropdownMenu">
           <ul class="profileMenu">
-            <li><router-link to="/profile">个人主页</router-link></li>
-            <li>退出登录</li>
+            <li><router-link to="/profile">個人主頁</router-link></li>
+            <li>退出登錄</li>
           </ul>
         </div>
       </div>

@@ -32,6 +32,13 @@
 
 <style scoped>
 
+  .content {
+    width: 80vw;
+    max-width: 1124px;
+    margin: 0 auto;
+    margin-top: 88px;
+  }
+
   .postActions {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

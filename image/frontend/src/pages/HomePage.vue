@@ -5,7 +5,7 @@
         <img src="" alt="" width="100%" height="100%" style="background: #eee" />
         <div class="postInfo">
           <div class="postMeta">
-            <img src="" alt="" class="avatar" />
+            <TheAvatar />
             <span>陳詩偉</span>
             <span class="postPubDate">9小時之前發佈</span>
             <div class="postActions">
@@ -27,6 +27,7 @@
 
 <script setup>
   import TheIcon from '../components/TheIcon.vue'
+  import TheAvatar from '../components/TheAvatar.vue'
 
 </script>
 

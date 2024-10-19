@@ -14,7 +14,7 @@
       </button>
       <!-- dropdown -->
       <div class="profileDropDown">
-        <img src="../assets/avatarDefault.png" width="42" height="42" alt="avatar" style="background: #ccc" />
+        <TheAvatar :width="42" :height="42" style="cursor: pointer;" />
         <!-- <div class="dropdownMenu">
           <ul class="profileMenu">
             <li><router-link to="/profile">個人主頁</router-link></li>
@@ -28,6 +28,7 @@
 
 <script setup>
   import TheIcon from "./TheIcon.vue";
+  import TheAvatar from "./TheAvatar.vue";
 
 </script>
 

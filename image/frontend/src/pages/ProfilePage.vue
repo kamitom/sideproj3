@@ -16,6 +16,6 @@
 
 <style scoped>
   .scaled-img {
-    width: 70%;
+    width: 60%;
   }
 </style>

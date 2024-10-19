@@ -15,12 +15,12 @@
       <!-- dropdown -->
       <div class="profileDropDown">
         <TheAvatar :width="42" :height="42" style="cursor: pointer;" />
-        <!-- <div class="dropdownMenu">
+        <div class="dropdownMenu">
           <ul class="profileMenu">
             <li><router-link to="/profile">個人主頁</router-link></li>
             <li>退出登錄</li>
           </ul>
-        </div> -->
+        </div>
       </div>
     </div>
   </nav>

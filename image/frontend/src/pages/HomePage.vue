@@ -22,12 +22,16 @@
         </div>
       </div>
     </div>
+    <!-- <PostDetails /> -->
+    <HelloTeleport />
   </div>
 </template>
 
 <script setup>
   import TheIcon from '../components/TheIcon.vue'
   import TheAvatar from '../components/TheAvatar.vue'
+  import PostDetails from '../components/PostDetails.vue';
+  import HelloTeleport from '../components/HelloTeleport.vue';
 
 </script>
 

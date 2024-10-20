@@ -13,7 +13,7 @@
         <TheIcon icon="publish" />
       </button>
       <!-- dropdown -->
-      <div class="profileDropDown">
+      <!-- <div class="profileDropDown">
         <TheAvatar :width="42" :height="42" style="cursor: pointer;" />
         <div class="dropdownMenu">
           <ul class="profileMenu">
@@ -21,7 +21,7 @@
             <li>退出登錄</li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </div>
   </nav>
 </template>

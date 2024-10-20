@@ -22,8 +22,8 @@
         </div>
       </div>
     </div>
-    <!-- <PostDetails /> -->
-    <HelloTeleport />
+    <PostDetails />
+    <!-- <HelloTeleport /> -->
   </div>
 </template>
 

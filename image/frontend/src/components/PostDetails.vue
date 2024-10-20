@@ -1,9 +1,14 @@
 <template>
+
+  <button @click="showModal = true">
+    <TheIcon icon="favorite" />
+    Show Modal
+  </button>
   <teleport to="body">
-    <div class="modal">
+    <div v-if="showModal" class="modal">
       <div class="backdrop"></div>
       <div class="modalContent">
-        <button class="closeBtn">
+        <button class="closeBtn" @click="showModal = false">
           <TheIcon icon="close" />
         </button>
         <div class="postDetails">
@@ -50,19 +55,48 @@
 <script setup>
   import TheAvatar from './TheAvatar.vue';
   import TheIcon from './TheIcon.vue';
+  import { ref } from 'vue';
+
+  const showModal = ref(true);
 </script>
 
 <style scoped>
   .modal {
     position: fixed;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+  }
+
+  .backdrop {
+    background: rgba(0, 0, 0, 0.56);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .modalContent {
+    position: relative;
     background: white;
-    padding: 1em;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 60vw;
-    height: 60vh;
+    border-radius: 52px;
+    overflow: hidden;
+  }
+
+  .closeBtn {
+    position: absolute;
+    background: none;
+    border: none;
+    right: 14px;
+    top: 10px;
+  }
+
+  .closeBtn svg {
+    width: 54px;
+    height: 54px;
   }
 
   .postDetails {

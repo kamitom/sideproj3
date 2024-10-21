@@ -7,7 +7,7 @@
           <span>陳詩偉</span>
           <router-link to="/profile/edit">編輯</router-link>
         </p>
-        <p class="handle">@dotii_white</p>
+        <p class="handle">@doitt_white</p>
         <div class="description">
           <pre>
             ☎️ 0912345678
@@ -35,7 +35,7 @@
     <div class="tabContent">
       <p>199 篇帖子</p>
       <div class="posts">
-        <img src="" alt="" class="postImage" v-for="n in 7" :key="n">
+        <img src="" alt="" class="postImage" v-for="n in 5" :key="n">
       </div>
     </div>
   </div>

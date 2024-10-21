@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <template v-if="$route.name != 'login'">
     <header class="header">
       <NavBar />
     </header>
@@ -7,8 +7,10 @@
 
       <router-view></router-view>
     </TheLayout>
-  </div>
-
+  </template>
+  <template v-else>
+    <router-view></router-view>
+  </template>
 </template>
 
 <script setup>

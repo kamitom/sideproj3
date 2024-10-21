@@ -6,6 +6,29 @@
       <TheButton>修改Avatar</TheButton>
       <input type="file" class="inputFile">
     </div>
+    <form class="profileForm">
+      <label for="username">用戶:</label>
+      <input type="text" />
+      <label for="name">暱稱:</label>
+      <input type="text" />
+      <label for="intro">簡介:</label>
+      <textarea rows="12"> </textarea>
+      <label for="mobilePhone">行動電話:</label>
+      <input type="text" />
+      <label>性別:</label>
+      <div class="genderRadios">
+        <input type="radio" name="gender" id="M" value="M" />
+        男
+        <input type="radio" name="gender" id="F" value="F" />
+        女
+      </div>
+      <label for="website">網站:</label>
+      <input type="text" />
+      <div class="actions">
+        <TheButton type="reset" reverse>取消</TheButton>
+        <TheButton type="submit">儲存</TheButton>
+      </div>
+    </form>
   </div>
 </template>
 

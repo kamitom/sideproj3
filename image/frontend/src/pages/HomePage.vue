@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <PostDetails />
+    <!-- <PostDetails /> -->
     <!-- <HelloTeleport /> -->
   </div>
 </template>

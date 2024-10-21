@@ -5,7 +5,9 @@
       <div class="profile">
         <p class="name">
           <span>陳詩偉</span>
-          <router-link to="/profile/edit">編輯</router-link>
+          <router-link to="/profile/edit">
+            <TheButton>編輯</TheButton>
+          </router-link>
         </p>
         <p class="handle">@doitt_white</p>
         <div class="description">
@@ -43,6 +45,7 @@
 
 <script setup>
   import TheAvatar from '../components/TheAvatar.vue';
+  import TheButton from '../components/TheButton.vue';
 </script>
 
 <style scoped>

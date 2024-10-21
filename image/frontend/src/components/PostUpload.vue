@@ -8,7 +8,7 @@
         </label>
         <div class="postContent">
           <textarea placeholder="隨你寫..." class="postContentInput"></textarea>
-          <TheButton class="pubBtn button">發佈</TheButton>
+          <TheButton class="pubBtn">發佈</TheButton>
         </div>
       </div>
     </TheModal>
@@ -18,6 +18,7 @@
 <script setup>
   import TheModal from './TheModal.vue';
   import TheIcon from './TheIcon.vue';
+  import TheButton from './TheButton.vue';
 </script>
 
 

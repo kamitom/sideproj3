@@ -27,7 +27,7 @@
                 <span class="user">李明</span>
                 <span class="commentDate">1d</span>
                 <p class="commentContent">
-                  非常的好文!
+                  非常好!
                 </p>
               </div>
             </div>
@@ -176,8 +176,17 @@
     row-gap: 16px;
   }
 
-  .postActions> :deep(svg) {
+  .postActions>svg {
     transform: scale(0.8125);
+    width: 32px;
+    height: 32px;
+    grid-row: 1 / 2;
+    stroke: black;
+    cursor: pointer;
+  }
+
+  .postActions>svg {
+    font-size: 14px;
   }
 
   .postPubDate {

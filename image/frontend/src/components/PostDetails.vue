@@ -1,63 +1,57 @@
 <template>
-
-  <button @click="showModal = true">
-    <TheIcon icon="favorite" />
-    Show Modal
-  </button>
-  <teleport to="body">
-    <div v-if="showModal" class="modal">
-      <div class="backdrop"></div>
-      <div class="modalContent">
-        <button class="closeBtn" @click="showModal = false">
-          <TheIcon icon="close" />
-        </button>
-        <div class="postDetails">
-          <img src="" alt="" class="postImage">
-          <div class="postMeta">
-            <div class="author">
-              <TheAvatar />
-              <span>陳詩偉</span>
-            </div>
-            <pre class="postDesc">
+  <div>
+    <button @click="showModal = true">
+      <TheIcon icon="favorite" />
+      Show Modal
+    </button>
+    <teleport to="body">
+      <div v-if="showModal" class="modal">
+        <div class="backdrop"></div>
+        <div class="modalContent">
+          <button class="closeBtn" @click="showModal = false">
+            <TheIcon icon="close" />
+          </button>
+          <div class="postDetails">
+            <img src="" alt="" class="postImage">
+            <div class="postMeta">
+              <div class="author">
+                <TheAvatar />
+                <span>陳詩偉</span>
+              </div>
+              <pre class="postDesc">
               這是我的照片,希望大家都喜歡😍
             </pre>
-            <div class="comments">
-              <div class="comment" v-for="n in 3" :key="n">
-                <TheAvatar />
-                <span class="user">李明</span>
-                <span class="commentDate">1d</span>
-                <p class="commentContent">
-                  非常好!
-                </p>
+              <div class="comments">
+                <div class="comment" v-for="n in 3" :key="n">
+                  <TheAvatar />
+                  <span class="user">李明</span>
+                  <span class="commentDate">1d</span>
+                  <p class="commentContent">
+                    非常好!
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="actions">
-              <div class="postActions">
-                <TheIcon icon="like" />
-                <span>1.9w</span>
-                <TheIcon icon="comment" />
-                <span>1.1w</span>
-                <TheIcon icon="favorite" />
-                <span>108w</span>
+              <div class="actions">
+                <PostActions />
+                <span class="postPubDate">12h</span>
+                <input type="text" class="commentInput" id="" name="comment" placeholder="隨你寫,我ok.">
+                <button class="commentPubBtn">發佈</button>
               </div>
-              <span class="postPubDate">12h</span>
-              <input type="text" class="commentInput" id="" name="comment" placeholder="隨便你寫評論吧!我都ok的.">
-              <button class="commentPubBtn">發佈</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </teleport>
-
+    </teleport>
+  </div>
 </template>
 
 <script setup>
   import TheAvatar from './TheAvatar.vue';
   import TheIcon from './TheIcon.vue';
+  import PostActions from './PostActions.vue';
   import { ref } from 'vue';
 
-  const showModal = ref(true);
+  const showModal = ref(false);
 </script>
 
 <style scoped>
@@ -176,25 +170,13 @@
     row-gap: 16px;
   }
 
-  .postActions {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    column-gap: 16px;
-    row-gap: 4px;
+
+
+  .postActions> :deep(svg) {
+    transform: scale(0.8125);
   }
 
-  .postActions>svg {
-    width: 32px;
-    height: 32px;
-    grid-row: 1 / 2;
-    stroke: black;
-    cursor: pointer;
-  }
 
-  .postActions>svg {
-    font-size: 14px;
-  }
 
   .postPubDate {
     color: #9f9f9f;

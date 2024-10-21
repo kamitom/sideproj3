@@ -8,11 +8,7 @@
             <TheAvatar />
             <span>陳詩偉</span>
             <span class="postPubDate">9小時之前發佈</span>
-            <div class="postActions">
-              <TheIcon icon="like" fill="none" stroke="#000000" /><span>1.5w</span>
-              <TheIcon icon="comment" fill="none" stroke="#000000" /><span>1.1w</span>
-              <TheIcon icon="favorite" fill="none" stroke="#000000" /><span>99w</span>
-            </div>
+            <PostActions />
           </div>
           <div class="postDesc">
             <p>這是一棵樹。這是一棵樹。這是一棵樹。這是一棵樹。這是一棵樹。這是一棵樹。這是一棵樹。這是一棵樹。
@@ -31,7 +27,8 @@
   import TheIcon from '../components/TheIcon.vue'
   import TheAvatar from '../components/TheAvatar.vue'
   import PostDetails from '../components/PostDetails.vue';
-  import HelloTeleport from '../components/HelloTeleport.vue';
+  import PostActions from '../components/PostActions.vue';
+  // import HelloTeleport from '../components/HelloTeleport.vue';
 
 </script>
 
@@ -45,22 +42,8 @@
   }
 
   .postActions {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    column-gap: 16px;
-    row-gap: 4px;
-  }
-
-  .postActions>svg {
-    width: 32px;
-    height: 32px;
-    grid-row: 1 / 2;
-    cursor: pointer;
-  }
-
-  .postActions>span {
-    font-size: 14px;
+    grid-area: actions;
+    justify-self: end;
   }
 
   .postItem {

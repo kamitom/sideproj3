@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div class="postList">
       <div class="postItem" v-for="n in 9" :key="n">
         <img src="" alt="" width="100%" height="100%" style="background: #eee" />
@@ -19,6 +19,7 @@
       </div>
     </div>
     <!-- <PostDetails /> -->
+    <PostUpload />
     <!-- <HelloTeleport /> -->
   </div>
 </template>
@@ -28,18 +29,13 @@
   import TheAvatar from '../components/TheAvatar.vue'
   import PostDetails from '../components/PostDetails.vue';
   import PostActions from '../components/PostActions.vue';
+  import PostUpload from '../components/PostUpload.vue';
   // import HelloTeleport from '../components/HelloTeleport.vue';
 
 </script>
 
 <style scoped>
 
-  .content {
-    width: 80vw;
-    max-width: 1124px;
-    margin: 0 auto;
-    margin-top: 88px;
-  }
 
   .postActions {
     grid-area: actions;

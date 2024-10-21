@@ -11,6 +11,9 @@
   <template v-else>
     <router-view></router-view>
   </template>
+  <footer class="footer" :class="{ inside: $route.name == 'login' }">
+    &copy;ShihWei. All rights reserved.
+  </footer>
 </template>
 
 <script setup>
@@ -25,5 +28,17 @@
   .header {
     height: 80px;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 38px 0;
+    color: #828282;
+  }
+
+  .footer.inside {
+    position: apsoolute;
+    bottom: 0;
+    width: 100%;
   }
 </style>

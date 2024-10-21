@@ -1,97 +1,46 @@
 <template>
   <div>
-    <button @click="showModal = true">
-      <TheIcon icon="favorite" />
-      Show Modal
-    </button>
-    <teleport to="body">
-      <div v-if="showModal" class="modal">
-        <div class="backdrop"></div>
-        <div class="modalContent">
-          <button class="closeBtn" @click="showModal = false">
-            <TheIcon icon="close" />
-          </button>
-          <div class="postDetails">
-            <img src="" alt="" class="postImage">
-            <div class="postMeta">
-              <div class="author">
-                <TheAvatar />
-                <span>陳詩偉</span>
-              </div>
-              <pre class="postDesc">
+    <TheModal>
+      <div class="postDetails">
+        <img src="" alt="" class="postImage">
+        <div class="postMeta">
+          <div class="author">
+            <TheAvatar />
+            <span>陳詩偉</span>
+          </div>
+          <pre class="postDesc">
               這是我的照片,希望大家都喜歡😍
             </pre>
-              <div class="comments">
-                <div class="comment" v-for="n in 3" :key="n">
-                  <TheAvatar />
-                  <span class="user">李明</span>
-                  <span class="commentDate">1d</span>
-                  <p class="commentContent">
-                    非常好!
-                  </p>
-                </div>
-              </div>
-              <div class="actions">
-                <PostActions />
-                <span class="postPubDate">12h</span>
-                <input type="text" class="commentInput" id="" name="comment" placeholder="隨你寫,我ok.">
-                <button class="commentPubBtn">發佈</button>
-              </div>
+          <div class="comments">
+            <div class="comment" v-for="n in 3" :key="n">
+              <TheAvatar />
+              <span class="user">李明</span>
+              <span class="commentDate">1d</span>
+              <p class="commentContent">
+                非常好!
+              </p>
             </div>
+          </div>
+          <div class="actions">
+            <PostActions />
+            <span class="postPubDate">12h</span>
+            <input type="text" class="commentInput" id="" name="comment" placeholder="隨你寫,我ok.">
+            <button class="commentPubBtn">發佈</button>
           </div>
         </div>
       </div>
-    </teleport>
+    </TheModal>
   </div>
 </template>
 
 <script setup>
+  import TheModal from './TheModal.vue';
   import TheAvatar from './TheAvatar.vue';
-  import TheIcon from './TheIcon.vue';
   import PostActions from './PostActions.vue';
-  import { ref } from 'vue';
 
-  const showModal = ref(false);
 </script>
 
 <style scoped>
-  .modal {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    place-items: center;
-  }
-
-  .backdrop {
-    background: rgba(0, 0, 0, 0.56);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
-
-  .modalContent {
-    position: relative;
-    background: white;
-    border-radius: 52px;
-    overflow: hidden;
-  }
-
-  .closeBtn {
-    position: absolute;
-    background: none;
-    border: none;
-    right: 14px;
-    top: 10px;
-  }
-
-  .closeBtn svg {
-    width: 54px;
-    height: 54px;
-  }
 
   .postDetails {
     display: grid;

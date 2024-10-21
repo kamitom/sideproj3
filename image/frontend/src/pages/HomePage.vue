@@ -4,7 +4,7 @@
       <PostItem v-for="n in 5" :key="n" />
     </PostList>
     <!-- <PostDetails /> -->
-    <!-- <PostUpload /> -->
+    <PostUpload />
     <!-- <HelloTeleport /> -->
   </div>
 </template>

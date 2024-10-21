@@ -1,6 +1,7 @@
 <template>
   <nav class="navbar">
-    <router-link to="/"><img src="../assets/logo.svg" /></router-link>
+    <!-- <router-link to="/"><img src="../assets/logo.svg" /></router-link> -->
+    <router-link to="/"><img src="../assets/svg-logo-h.svg" /></router-link>
     <div class="searchInput">
       <input type="text" @change="searchPosts" />
       <TheIcon icon="search" />

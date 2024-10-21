@@ -176,8 +176,15 @@
     row-gap: 16px;
   }
 
+  .postActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    column-gap: 16px;
+    row-gap: 4px;
+  }
+
   .postActions>svg {
-    transform: scale(0.8125);
     width: 32px;
     height: 32px;
     grid-row: 1 / 2;
